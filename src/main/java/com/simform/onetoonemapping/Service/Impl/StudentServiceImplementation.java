@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @Slf4j
@@ -26,20 +28,20 @@ public class StudentServiceImplementation implements StudentService {
 //
 //  }
 //
-//  @Override
-//  public List<Student> getAllStudents() {
-//
-//    if(studentRepository.count() == 0){
-//      log.error("Student Not Found");
-//    }
-//    else {
-//      log.info("Student list is Available");
-//    }
-//
-//
-//    return studentRepository.findAll();
-//
-//  }
+  @Override
+  public List<Student> getAllStudents() {
+
+    if(studentRepository.count() == 0){
+      log.error("Student Not Found");
+    }
+    else {
+      log.info("Student list is Available");
+    }
+
+
+    return studentRepository.findAll();
+
+  }
 
 //  @Override
 //  public Student updateStudent(Student student) {

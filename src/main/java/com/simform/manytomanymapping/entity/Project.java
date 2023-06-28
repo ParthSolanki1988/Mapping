@@ -25,7 +25,7 @@ public class Project {
   String proName;
 
   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-          @JsonManagedReference
+  @JsonManagedReference
   List<Employee> employees = new ArrayList<>();
 
 
